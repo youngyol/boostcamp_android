@@ -22,19 +22,21 @@
             app:contentScrim="?attr/colorPrimary">
 
             <RelativeLayout
+                android:id="@+id/direct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/fbBlue">
+                android:background="@color/fbBlue"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
 
                 <ImageButton
+                    android:id="@+id/directMSG"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_margin="11dp"
-                    android:id="@+id/imageView"
-                    android:scaleType="fitXY"
                     android:background="@color/fbBlue"
-                    android:src ="@drawable/directmsg"
-                    android:onClick="onClickImgBtn"/>
+                    android:scaleType="fitXY"
+                    android:src="@drawable/directmsg" />
 
 
                 <EditText
@@ -42,34 +44,33 @@
                     android:layout_height="40dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_toLeftOf="@+id/imageView1"
-                    android:layout_toRightOf="@+id/imageView"
+                    android:layout_toLeftOf="@+id/message"
+                    android:layout_toRightOf="@+id/directMSG"
                     android:backgroundTint="@color/white"
-                    android:hint="@string/edit_search_hint"
-                    android:textSize="@dimen/text_small"
-                    android:drawableStart="@drawable/ic_search"
                     android:drawableLeft="@drawable/ic_search"
-                    android:textCursorDrawable="@drawable/edtx_cursor"
-                    android:textColor="@color/white"
                     android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_search"
+                    android:hint="@string/edit_search_hint"
+                    android:inputType="textNoSuggestions"
+                    android:textColor="@color/white"
                     android:textColorHint="@color/white"
-                    android:inputType="textNoSuggestions"/>
+                    android:textCursorDrawable="@drawable/edtx_cursor"
+                    android:textSize="@dimen/text_small" />
 
 
                 <ImageView
-                    android:id="@+id/imageView1"
+                    android:id="@+id/message"
                     android:layout_width="58dp"
                     android:layout_height="28dp"
                     android:layout_alignParentRight="true"
                     android:layout_margin="8dp"
-                    android:src="@drawable/ic_messenger"
-                    android:onClick="onClickMSG"/>
+                    android:src="@drawable/ic_messenger" />
             </RelativeLayout>
 
 
         </android.support.design.widget.CollapsingToolbarLayout>
         <android.support.design.widget.TabLayout
-            android:id="@+id/tabLayout"
+            android:id="@+id/mTabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"

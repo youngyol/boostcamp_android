@@ -13,24 +13,42 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+
 public class MainActivity extends AppCompatActivity {
-    private TabLayout tabLayout;
-    private ViewPager viewPager;
+    @BindView(R.id.pager)
+    ViewPager viewPager;
+    @BindView(R.id.mTabLayout)
+    TabLayout tabLayout;
+
+    @OnClick({R.id.message, R.id.directMSG})
+    public void onClickMSG(View v){
+        switch (v.getId()){
+            case R.id.message:
+                Toast.makeText(v.getContext(), "메시지", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.directMSG:
+                Toast.makeText(v.getContext(), "다이렉트 메시지함", Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
         // Initializing the TabLayout
-        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.newsfeed_selector));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.friend_selector));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.alert_selector));
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.menu_selector));
-    //    tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-        // Initializing ViewPager
         viewPager = (ViewPager) findViewById(R.id.pager);
 
         // Creating TabPagerAdapter adapter
@@ -59,28 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onClickImgBtn(View v){
-        Toast.makeText(v.getContext(), "다이렉트 메시지함", Toast.LENGTH_SHORT).show();
 
-
-    }
-
-
-    public void onClickMSG(View v){
-        Toast.makeText(v.getContext(), "메시지", Toast.LENGTH_SHORT).show();
-
-
-    }
-
-
-//    private void initLayout(){
-//
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//
-//        CollapsingToolbarLayout ctl = (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-//        ctl.setTitle("Details");
-//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {   getMenuInflater().inflate(R.menu.menu_search, menu);
@@ -107,17 +104,13 @@ public class MainActivity extends AppCompatActivity {
             // Returning the current tabs
             switch (position) {
                 case 0:
-                    FirstFragment tabFragment1 = new FirstFragment();
-                    return tabFragment1;
+                    return new FirstFragment();
                 case 1:
-                    SecondFragment tabFragment2 = new SecondFragment();
-                    return tabFragment2;
+                    return  new SecondFragment();
                 case 2:
-                    ThirdFragment tabFragment3 = new ThirdFragment();
-                    return tabFragment3;
+                    return  new ThirdFragment();
                 case 3:
-                    FourthFragment tabFragment4 = new FourthFragment();
-                    return tabFragment4;
+                    return  new FourthFragment();
                 default:
                     return null;
             }

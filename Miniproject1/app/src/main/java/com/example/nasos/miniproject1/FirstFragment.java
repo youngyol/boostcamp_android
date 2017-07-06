@@ -18,6 +18,7 @@ public class FirstFragment extends Fragment   {
     LinearLayoutManager linearLayoutManager;
     SwipeRefreshLayout swipeRefreshLayout;
 
+
     public FirstFragment() {
     }
 
