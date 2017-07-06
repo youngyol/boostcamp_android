@@ -36,11 +36,16 @@ public class SecondFragment extends Fragment   {
 
         itemDatas.add(new ItemData("김다휘님 외 28명","내용1",R.drawable.photo2,"김준영","댓글 3개", "7월 5일 오후1:19"));
         itemDatas.add(new ItemData("안고운님 외 7명","내용1",R.drawable.photo,"이지건"," ","7월 5일 오후1:11"));
-        recyclerAdapter = new RecyclerAdapter(itemDatas, getContext());
+        recyclerAdapter = new RecyclerAdapter(getHeader(),itemDatas, getContext());
         recyclerView.setAdapter(recyclerAdapter);
 
 
         return view;
     }
-
+    public  Header getHeader()
+    {
+        Header header = new Header();
+        header.setHeader("I'm header");
+        return header;
+    }
 }

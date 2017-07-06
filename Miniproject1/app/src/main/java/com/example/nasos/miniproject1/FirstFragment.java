@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +20,7 @@ public class FirstFragment extends Fragment   {
     SwipeRefreshLayout swipeRefreshLayout;
 
 
+
     public FirstFragment() {
     }
 
@@ -28,10 +30,14 @@ public class FirstFragment extends Fragment   {
         View view = inflater.inflate(R.layout.fragment_second, container, false);
         recyclerView = (RecyclerView)view.findViewById(R.id.rcv);
 
+
+
         linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
         swipeRefreshLayout = (SwipeRefreshLayout)view.findViewById(R.id.swipe);
+
+        swipeRefreshLayout.setRefreshing(false);
         itemDatas = new ArrayList<ItemData>();
         itemDatas.add(new ItemData("김다휘님 외 28명","Annotate fields with @BindView and a view ID for Butter Knife to find and automatically cast the corresponding view in your layout.",R.drawable.photo2,"김준영","댓글 9개", "7월 5일 오후1:19"));
         itemDatas.add(new ItemData("안고운님 외 7명","Instead of slow reflection, code is generated to perform the view look-ups. Calling bind delegates to this generated code that you can see and debug.",R.drawable.photo,"이지건","댓글 5개","7월 5일 오후1:11"));
@@ -40,11 +46,18 @@ public class FirstFragment extends Fragment   {
                 "\n",R.drawable.photo4,"문경헌","댓글 3개", "7월 4일 오후1:19"));
         itemDatas.add(new ItemData("안고운님 외 7명","You can also perform binding on arbitrary objects by supplying your own view root.\n" +
                 "\n",R.drawable.photo,"최진주","댓글 13개","7월 3일 오후2:11"));
-        recyclerAdapter = new RecyclerAdapter(itemDatas, getContext());
+        recyclerAdapter = new RecyclerAdapter(getHeader(),itemDatas, getContext());
         recyclerView.setAdapter(recyclerAdapter);
 
 
         return view;
+    }
+
+    public  Header getHeader()
+    {
+        Header header = new Header();
+        header.setHeader("글쓰기");
+        return header;
     }
 
 }

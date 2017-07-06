@@ -63,4 +63,7 @@ public class BaseViewHolder extends RecyclerView.ViewHolder {
         ButterKnife.bind(this, itemView);
 
     }
+
+
+
 }
