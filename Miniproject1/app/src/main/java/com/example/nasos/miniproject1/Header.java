@@ -1,5 +1,9 @@
 package com.example.nasos.miniproject1;
 
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.TextView;
+
 /**
  * Created by nasos on 2017-07-07.
  */
@@ -16,4 +20,9 @@ public class Header {
     public void setHeader(String header) {
         this.header = header;
     }
+
+
 }
+
+
+

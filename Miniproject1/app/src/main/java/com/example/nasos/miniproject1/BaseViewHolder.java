@@ -28,7 +28,7 @@ public class BaseViewHolder extends RecyclerView.ViewHolder {
     @BindView(R.id.textTIme)
     TextView VH_time;
 
-    @OnClick({ R.id.img_share, R.id.img_like, R.id.img_comment, R.id.image_id , R.id.userName, R.id.textTIme,R.id.content_txt, R.id.emoticon})
+    @OnClick({ R.id.img_share, R.id.img_like, R.id.img_comment, R.id.image_id , R.id.userName, R.id.textTIme,R.id.content_txt, R.id.emoticon,R.id.user_profile})
     public void onClickCard(View v){
         switch (v.getId()){
             case R.id.img_share:
@@ -49,14 +49,22 @@ public class BaseViewHolder extends RecyclerView.ViewHolder {
             case R.id.content_txt:
                 Toast.makeText(v.getContext(), "내용", Toast.LENGTH_SHORT).show();
                 break;
-
+            case R.id.user_profile:
+                Toast.makeText(v.getContext(), "프로필사진", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.emoticon :
                 Toast.makeText(v.getContext(), "이모티콘", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.textTIme :
+                Toast.makeText(v.getContext(), "작성시간", Toast.LENGTH_SHORT).show();
                 break;
 
         }
 
     }
+
+
+
 
     public BaseViewHolder(View itemView) {
         super(itemView);
