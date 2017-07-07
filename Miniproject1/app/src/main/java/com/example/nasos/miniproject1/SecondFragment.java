@@ -25,17 +25,25 @@ public class SecondFragment extends Fragment   {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_second, container, false);
-        recyclerView = (RecyclerView)view.findViewById(R.id.rcv);
+        recyclerView = (RecyclerView)view.findViewById(R.id.second_rcv);
 
         linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
-        swipeRefreshLayout = (SwipeRefreshLayout)view.findViewById(R.id.swipe);
-        itemDatas = new ArrayList<ItemData>();
-        itemDatas.add(new ItemData("이승훈님 외 1명","[스포탈코리아] 박대성 기자= 영국 유력 언론이 알렉상드르 라카제트의 아스널행을 보도했다.\n 팀 내 역대 최고액을 경신할 예정이다. 이제 공식 발표만 남았다.\n",R.drawable.photo3,"정순호"," ","7월 4일 오후9:11"));
+        swipeRefreshLayout = (SwipeRefreshLayout)view.findViewById(R.id.second_swipe);
 
-        itemDatas.add(new ItemData("김다휘님 외 28명","내용1",R.drawable.photo2,"김준영","댓글 3개", "7월 5일 오후1:19"));
-        itemDatas.add(new ItemData("안고운님 외 7명","내용1",R.drawable.photo,"이지건"," ","7월 5일 오후1:11"));
+
+        swipeRefreshLayout.setRefreshing( false );
+        swipeRefreshLayout.setEnabled( false );
+
+
+        itemDatas = new ArrayList<ItemData>();
+        itemDatas.add(new ItemData("김다휘님 외 28명",getContext().getString(R.string.content1),R.drawable.photo,"김준영","댓글 9개", "7월 5일 오후1:19"));
+        itemDatas.add(new ItemData("안고운님 외 7명",getContext().getString(R.string.content),R.drawable.photo2,"이지건","댓글 5개","7월 5일 오후1:11"));
+        itemDatas.add(new ItemData("이승훈님 외 1명",getContext().getString(R.string.content2),R.drawable.photo,"정순호"," ","7월 4일 오후9:11"));
+        itemDatas.add(new ItemData("안고운님 외 7명",getContext().getString(R.string.content1),R.drawable.photo,"최진주","댓글 13개","7월 3일 오후2:11"));
+
+
         recyclerAdapter = new RecyclerAdapter(getHeader(),itemDatas, getContext());
         recyclerView.setAdapter(recyclerAdapter);
 
@@ -45,7 +53,7 @@ public class SecondFragment extends Fragment   {
     public  Header getHeader()
     {
         Header header = new Header();
-        header.setHeader("I'm header");
+        header.setHeader(getContext().getString(R.string.header_edit_text));
         return header;
     }
 }

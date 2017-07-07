@@ -10,17 +10,29 @@
 
         <ImageView
             android:id="@+id/header_user_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
             android:scaleType="fitXY"
-            android:src="@drawable/profile" />
+            android:src="@drawable/user" />
+
+        <ImageView
+            android:id="@+id/write_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/write"
+            android:layout_toEndOf="@+id/header_user_profile" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/header_user_profile"
-            android:gravity="center"
+            android:layout_toRightOf="@+id/write_img"
+            android:layout_marginLeft="5dp"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
             android:id="@+id/txtHeader"
             android:text="@string/header_edit_text" />
 

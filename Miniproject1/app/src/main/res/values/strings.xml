@@ -4,6 +4,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="edit_search_hint">검색</string>
-    <string name="header_edit_text">글쓰기</string>
+    <string name="header_edit_text">글 쓰 기</string>
+
+    <string name="content">[스포탈코리아] 박대성 기자= 영국 유력 언론이 알렉상드르 라카제트의 아스널행을 보도했다.\n 팀 내 역대 최고액을 경신할 예정이다. 이제 공식 발표만 남았다.</string>
+    <string name="content1">배달앱이 관심사로 급부상했다. 유영민 미래창조과학부 장관 후보자의 발언이 계기였다. \n인사청문회에서 국가가 운영할 수도 있다는 취지의 답변을 하면서다. </string>
+    <string name="content2">같이 Html.fromHtml()을 이용하여 Java에서 두꺼운 효과(bold)를 주는 처리하는 방법을 찾아 시도해보았으나,\n 역시 영문에서는 먹히지만 한글에서는 먹히지 않았다.</string>
+    <string name="content3">맨체스터 유나이티드는 세계 기록이라 할 수 있는 1억 파운드 가치의 계약을 에버튼과 합의했다.\n 이 로멜루 루카쿠 영입 계약에는 웨인 루니의 이적도 연관되어 있으며, 루니는 천만 파운드의 가치로 평가되고 있다.</string>
+
 
 </resources>
