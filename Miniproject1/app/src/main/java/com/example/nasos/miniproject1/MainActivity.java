@@ -1,18 +1,19 @@
 package com.example.nasos.miniproject1;
-import android.app.SearchManager;
+
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SearchView;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Toast;
+
+import com.example.nasos.miniproject1.view.FirstFragment;
+import com.example.nasos.miniproject1.view.FourthFragment;
+import com.example.nasos.miniproject1.view.SecondFragment;
+import com.example.nasos.miniproject1.view.ThirdFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -83,16 +84,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {   getMenuInflater().inflate(R.menu.menu_search, menu);
-        // Retrieve the SearchView and plug it into SearchManager
-        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.action_search));
-        SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-        searchView.setIconifiedByDefault(false);
-        return  true;
-    }
 
     public class TabPagerAdapter extends FragmentStatePagerAdapter {
 

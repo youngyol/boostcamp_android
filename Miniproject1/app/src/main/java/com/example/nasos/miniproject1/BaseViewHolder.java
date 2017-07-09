@@ -28,11 +28,13 @@ public class BaseViewHolder extends RecyclerView.ViewHolder {
     @BindView(R.id.textTIme)
     TextView VH_time;
 
-    @OnClick({ R.id.img_share, R.id.img_like, R.id.img_comment, R.id.image_id , R.id.userName, R.id.textTIme,R.id.content_txt, R.id.emoticon,R.id.user_profile})
+
+    @OnClick({ R.id.img_share, R.id.img_like, R.id.img_comment, R.id.image_id ,
+                R.id.userName, R.id.textTIme,R.id.content_txt, R.id.emoticon,R.id.user_profile})
     public void onClickCard(View v){
         switch (v.getId()){
             case R.id.img_share:
-                Toast.makeText(v.getContext(), "공유하기", Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(), "공유", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.img_like:
                 Toast.makeText(v.getContext(), "좋아요", Toast.LENGTH_SHORT).show();

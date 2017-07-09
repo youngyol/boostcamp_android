@@ -1,8 +1,4 @@
-package com.example.nasos.miniproject1;
-
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.TextView;
+package com.example.nasos.miniproject1.model;
 
 /**
  * Created by nasos on 2017-07-07.
