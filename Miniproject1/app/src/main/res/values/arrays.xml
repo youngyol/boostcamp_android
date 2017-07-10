@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="tabs_icon">
+        <item>@drawable/newsfeed_selector</item>
+        <item>@drawable/friend_selector</item>
+        <item>@drawable/alert_selector</item>
+        <item>@drawable/menu_selector</item>
+    </array>
+</resources>

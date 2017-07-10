@@ -1,5 +1,6 @@
 package com.example.nasos.miniproject1;
 
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -9,12 +10,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
-
-import com.example.nasos.miniproject1.view.FirstFragment;
-import com.example.nasos.miniproject1.view.FourthFragment;
-import com.example.nasos.miniproject1.view.SecondFragment;
-import com.example.nasos.miniproject1.view.ThirdFragment;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -46,11 +41,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        // Initializing the TabLayout
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.newsfeed_selector));
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.friend_selector));
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.alert_selector));
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.menu_selector));
+
+
+//         Initializing the TabLayout
+        TypedArray tabIcons = getResources().obtainTypedArray(R.array.tabs_icon);
+        for (int index = 0; index < 4; index ++){
+            tabLayout.addTab(tabLayout.newTab());
+            tabLayout.getTabAt(index).setIcon(tabIcons.getResourceId(index, R.drawable.friend_selector));
+        }
+ 
 
         viewPager = (ViewPager) findViewById(R.id.pager);
 
@@ -82,40 +81,4 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-    public class TabPagerAdapter extends FragmentStatePagerAdapter {
-
-        // Count number of tabs
-        private int tabCount;
-
-        public TabPagerAdapter(FragmentManager fm, int tabCount) {
-            super(fm);
-            this.tabCount = tabCount;
-        }
-        @Override
-            public Fragment getItem(int position) {
-
-            // Returning the current tabs
-            switch (position) {
-                case 0:
-                    return new FirstFragment();
-                case 1:
-                    return  new SecondFragment();
-                case 2:
-                    return  new ThirdFragment();
-                case 3:
-                    return  new FourthFragment();
-                default:
-                    return null;
-            }
-
-        }
-
-        @Override
-        public int getCount() {
-            return tabCount;
-        }
-    }
 }
