@@ -6,11 +6,11 @@
     android:background="@color/white"
     android:layout_height="match_parent">
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="5dp"
-        android:layout_marginBottom="4dp"
-        android:background="@color/gray" />
+    <!--<View-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="5dp"-->
+        <!--android:layout_marginBottom="4dp"-->
+        <!--android:background="@color/gray" />-->
 
 
     <RelativeLayout
@@ -88,12 +88,12 @@
     </RelativeLayout>
 
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="0.66dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:background="@color/gray" />
+    <!--<View-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="0.66dp"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:layout_marginRight="5dp"-->
+        <!--android:background="@color/gray" />-->
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -127,9 +127,9 @@
     </RelativeLayout>
 
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="5dp"
-        android:background="@color/gray" />
+    <!--<View-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="5dp"-->
+        <!--android:background="@color/gray" />-->
 
 </LinearLayout>

@@ -18,23 +18,29 @@
             android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
-            >
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+          >
+
+            <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/fbBlue"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:titleTextColor="#fff">
 
                 <RelativeLayout
-                 android:id="@+id/direct"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/fbBlue"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    >
+                    android:layout_height="@dimen/toolbar_helgiht"
+                    android:gravity="center_vertical"
+                    app:layout_scrollFlags="scroll|enterAlwaysCollapsed">
 
                     <ImageButton
                         android:id="@+id/directMSG"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:layout_margin="11dp"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginRight="11dp"
                         android:background="@color/fbBlue"
                         android:scaleType="fitXY"
                         android:src="@drawable/directmsg" />
@@ -43,8 +49,6 @@
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
                         android:layout_toLeftOf="@+id/message"
                         android:layout_toRightOf="@+id/directMSG"
                         android:backgroundTint="@color/white"
@@ -52,11 +56,11 @@
                         android:drawablePadding="10dp"
                         android:drawableStart="@drawable/ic_search"
                         android:hint="@string/edit_search_hint"
+                        android:imeOptions="flagNoExtractUi"
                         android:inputType="textNoSuggestions"
                         android:textColor="@color/white"
                         android:textColorHint="@color/white"
                         android:textCursorDrawable="@drawable/edtx_cursor"
-                        android:imeOptions="flagNoExtractUi"
                         android:textSize="@dimen/text_small" />
 
 
@@ -64,10 +68,13 @@
                         android:id="@+id/message"
                         android:layout_width="58dp"
                         android:layout_height="28dp"
+                        android:layout_marginTop="8dp"
                         android:layout_alignParentRight="true"
-                        android:layout_margin="8dp"
                         android:src="@drawable/ic_messenger" />
+
                 </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
@@ -76,11 +83,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            app:tabIndicatorColor="@android:color/white"
-
             app:layout_collapseMode="pin"
-            app:tabMode="fixed"
-            />
+
+            app:tabIndicatorColor="@android:color/white"
+            app:tabMode="fixed" />
 
         <View
             android:layout_width="wrap_content"

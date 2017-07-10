@@ -1,4 +1,5 @@
 package com.example.nasos.miniproject1.model;
+
 /**
  * Created by nasos on 2017-07-04.
  */
@@ -12,7 +13,7 @@ public class ItemData {
     String content;
     int img;
 
-    public ItemData(String title, String content, int image,String name, String comment, String time) {
+    public ItemData(String title, String content, int image, String name, String comment, String time) {
 
         this.comment = comment;
         this.name = name;
