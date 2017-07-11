@@ -27,6 +27,8 @@
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/fbBlue"
                 app:layout_scrollFlags="scroll|enterAlways|snap"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 app:titleTextColor="#fff">
 
                 <RelativeLayout
@@ -56,11 +58,11 @@
                         android:drawablePadding="10dp"
                         android:drawableStart="@drawable/ic_search"
                         android:hint="@string/edit_search_hint"
-                        android:imeOptions="flagNoExtractUi"
                         android:inputType="textNoSuggestions"
                         android:textColor="@color/white"
                         android:textColorHint="@color/white"
                         android:textCursorDrawable="@drawable/edtx_cursor"
+
                         android:textSize="@dimen/text_small" />
 
 

@@ -74,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     //Initializing the TabLayout
     private void initTabLayout() {
         TypedArray tabIcons = getResources().obtainTypedArray(R.array.tabs_icon);
