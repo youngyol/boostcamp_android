@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
@@ -18,17 +25,16 @@
             android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways|snap"
-          >
+            app:layout_scrollFlags="scroll|enterAlways|snap">
 
             <android.support.v7.widget.Toolbar xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/fbBlue"
-                app:layout_scrollFlags="scroll|enterAlways|snap"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
                 app:titleTextColor="#fff">
 
                 <RelativeLayout
@@ -41,8 +47,8 @@
                         android:id="@+id/directMSG"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:layout_marginTop="11dp"
                         android:layout_marginRight="11dp"
+                        android:layout_marginTop="11dp"
                         android:background="@color/fbBlue"
                         android:scaleType="fitXY"
                         android:src="@drawable/directmsg" />
@@ -70,8 +76,8 @@
                         android:id="@+id/message"
                         android:layout_width="58dp"
                         android:layout_height="28dp"
-                        android:layout_marginTop="8dp"
                         android:layout_alignParentRight="true"
+                        android:layout_marginTop="8dp"
                         android:src="@drawable/ic_messenger" />
 
                 </RelativeLayout>
@@ -96,13 +102,6 @@
             android:background="@color/gray" />
 
     </android.support.design.widget.AppBarLayout>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
-
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 </android.support.design.widget.CoordinatorLayout>
 
