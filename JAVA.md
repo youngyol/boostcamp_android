@@ -12,8 +12,6 @@ String str1 = new String("hello");
 
 System.out.println(str == temp);  // true  
 System.out.println(str1 == temp);  // false
-
-  
 ```
 
 자바에서는 기본자료형과 참조형이 존재함.
