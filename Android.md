@@ -165,6 +165,7 @@ protected void onStop() {
   </application>
   ```
 
+  ​
 
 - content resolver : 외부 앱에서 프로바이더를 사용하기 위해 사용
 
@@ -174,3 +175,45 @@ protected void onStop() {
 
 
 
+#### Content Resolver 이용하여 앨범에 있는 이미지 파일 읽기
+
+```java
+                String[] projection = { MediaStore.Images.Media.DATA, MediaStore.Images.Media._ID };
+                Cursor imageCursor =managedQuery(
+                            MediaStore.Images.Media.EXTERNAL_CONTENT_URI, // 이미지 컨텐트 테이블
+                            projection, // DATA, _ID를 출력
+                            null,       // 모든 개체 출력
+                            null,
+                            null);      // 정렬 안 함
+
+
+			   String result =" ";
+                String last =" ";
+                int dataColumnIndex = imageCursor.getColumnIndex(projection[0]);
+                int idColumnIndex = imageCursor.getColumnIndex(projection[1]);
+                if (imageCursor == null) {
+                    // Error 발생
+                    // 적절하게 handling 해주세요
+                } else if (imageCursor.moveToFirst()) {
+                    do {
+                        String filePath = imageCursor.getString(dataColumnIndex);
+                        String imageId = imageCursor.getString(idColumnIndex);
+                        result = result + filePath + "\n";
+                        last = filePath;
+
+                    } while(imageCursor.moveToNext());
+                } else {
+                    // imageCursor가 비었습니다.
+                }
+
+                txt.setText(result);
+                File imgFile = new  File(last);
+
+
+                Glide.with(ctx)
+                        .load(imgFile)
+                        .placeholder(R.mipmap.ic_launcher)
+                        .into(imgV);
+```
+
+ 
