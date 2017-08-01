@@ -130,3 +130,47 @@ protected void onStop() {
 
 <br/><br/>
 
+
+
+
+
+#### Bundle
+
+
+
+
+
+<br/><br/>
+
+
+
+#### Content provider
+
+- content provider :  앱내의 데이터를 외부 앱에 공개하는 목적으로 사용, 여기서 데이터라함은 DB,파일, 메모리 등이 될 수 있다.
+
+  안드로이드의 프로바이더를 포함한 모든 컴포넌트를 사용하기 위해서는 AndroidManifest.xml에 컴포넌트를 등록해줘야함. 
+
+  프로바이더는 다른 컴포넌트와는 다리 외부에서 인텐트를 통해 접근하지 않고 별도의 Uri사용
+
+  ```xml
+  <application>
+
+    ...
+    
+    <provider android:name = ".StudentsProviders"
+              android:authorities ="com.siperdroid.StudentsProvider"
+              android:exported="true"/>  <!-- false가 디폴트, false면 외부 앱에서 접근 못함 -->
+    
+    
+  </application>
+  ```
+
+
+- content resolver : 외부 앱에서 프로바이더를 사용하기 위해 사용
+
+
+
+- content observer : 리졸버 앱에서 등록, 프로바이더는 데이터 변경 시 등록된 콘텐트 관찰자에게 알려준다. 
+
+
+
