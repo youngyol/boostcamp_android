@@ -165,7 +165,6 @@ protected void onStop() {
   </application>
   ```
 
-  ​
 
 - content resolver : 외부 앱에서 프로바이더를 사용하기 위해 사용
 
