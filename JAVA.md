@@ -27,7 +27,7 @@ System.out.println(str1 == temp);  // false
 **동등성**: 동등하다! 두 오브젝트가 같은 정보(내용)를 갖고 있을 경우를 의미합니다. 
 [출처](http://blog.naver.com/PostView.nhn?blogId=zxcvb4825&logNo=220826548072&redirect=Dlog&widgetTypeCall=true)
 
-
+<br/><br/>
 
 
 
@@ -58,6 +58,7 @@ s1은 string constant pool에 객체가 만들어짐, s2은 이 string pool에 �
 
 s3은 heap 메모리에 개별 객체가 만들어짐
 
+<br/><br/>
 
 
 
@@ -77,6 +78,7 @@ s3은 heap 메모리에 개별 객체가 만들어짐
 ​                StringBuffer를 사용하는 것이 좋다.
 
 ​                StringBuilder에서 동기화 하려면 synchronized블록으로 감싸야 한다.
+<br/><br/>
 
 
 
@@ -93,6 +95,7 @@ s3은 heap 메모리에 개별 객체가 만들어짐
    ④ 상속(inheritance)   : 기존에 있던 클래스(즉, 기존의 클래스로부터 상속받은)를 바탕으로 다른 특성을 추가해 새로운 클래스를 만들 수 있음.
 
    ⑤ 인스턴스(Instance)  : 인스턴스는 추상화 개념 또는 클래스 객체, 컴퓨터 프로세스 등과 같은 템플릿(무엇인가를 만들 때 안내 역할 하는 데 사용되는 형식, 꼴, 틀 또는 모형 등을 의미)이 실제로 구현된 것
+<br/><br/>
 
 
 
@@ -113,6 +116,7 @@ s3은 heap 메모리에 개별 객체가 만들어짐
 ​        즉 하위 클래스에서 method를 재정의하는 것.
 
 ​        주로 생성자 method를 정의할 때 많이 사용.
+<br/><br/>
 
 
 
@@ -133,6 +137,7 @@ Young과 Old영역 존재
 
 [더보기](http://itmining.tistory.com/24)
 
+<br/><br/>
 
 
 
@@ -161,6 +166,7 @@ Young과 Old영역 존재
     ​
 
 [더보기 ](http://withwani.tistory.com/150)
+<br/><br/>
 
 
 
@@ -180,6 +186,7 @@ public class GenericDemo {
     }
 }
 ```
+<br/><br/>
 
 
 
@@ -287,6 +294,7 @@ Runnable 인터페이스는 run 메소드를 구현하도록 강제한다.
 
 [더보기](https://wikidocs.net/230)
 
+<br/><br/>
 
 
 
@@ -311,3 +319,4 @@ Runnable 인터페이스는 run 메소드를 구현하도록 강제한다.
   [더어어](http://gangzzang.tistory.com/entry/Java-%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%ACexception-handling)
 
   [더보기](http://wjheo.tistory.com/entry/final-finally-finalize-%EC%B0%A8%EC%9D%B4%EC%A0%90)
+<br/><br/>
