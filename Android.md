@@ -165,14 +165,12 @@ protected void onStop() {
   </application>
   ```
 
+  ​
 
 - content resolver : 외부 앱에서 프로바이더를 사용하기 위해 사용
 
 
-
 - content observer : 리졸버 앱에서 등록, 프로바이더는 데이터 변경 시 등록된 콘텐트 관찰자에게 알려준다. 
-
-
 
 #### Content Resolver 이용하여 앨범에 있는 이미지 파일 읽기
 
@@ -215,4 +213,30 @@ protected void onStop() {
                         .into(imgV);
 ```
 
- 
+
+
+
+
+최신순으로 썸네일 가져오기(썸네일의 Image_ID와 원본 Image_ID는 같으므로 이미지 아이디를 통해 원본을 가져올 수 있다)
+
+```java
+   String[] projection = {MediaStore.Images.Thumbnails.DATA,  MediaStore.Images.ImageColumns.DATE_TAKEN};
+   String orderBy = MediaStore.Images.ImageColumns.DATE_TAKEN + " DESC";
+
+   Uri images = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
+   ContentResolver cr = getContentResolver();
+   Cursor cur = cr.query(images,
+            projection, // Which columns to return
+            "",         // Which rows to return (all rows)
+            null,       // Selection arguments (none)
+            orderBy      // Ordering
+    );
+```
+
+
+
+<br/><br/>
+
+#### DDD(Domain-Driven Design)
+
+ aggregate roots are the only objects your client code loads from the repository.
