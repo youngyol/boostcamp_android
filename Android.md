@@ -235,6 +235,37 @@ protected void onStop() {
 
 
 
+- managedQuery() : **managedQuery() = ContentResolver.query() + startManagingCursor( Cursor )** 입니다.
+- query() : 
+
+
+
+managedQuery()  vs query() ](http://aroundck.tistory.com/126)
+
+
+
+
+
+#### Image
+
+- 이미지 비율 유지 하기 
+
+  ```xml
+      <uk.co.senab.photoview.PhotoView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:scaleType="fitXY"
+          android:adjustViewBounds="true"
+          android:layout_centerInParent="true"
+          android:id="@+id/detailImgID"/>
+  ```
+
+  xml에서 adjustViewBounds 속성을 true로 주면 비율에 맞게 확대되어서 나옴.
+
+
+
+
+
 <br/><br/>
 
 #### DDD(Domain-Driven Design)
