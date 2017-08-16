@@ -271,3 +271,10 @@ managedQuery()  vs query() ](http://aroundck.tistory.com/126)
 #### DDD(Domain-Driven Design)
 
  aggregate roots are the only objects your client code loads from the repository.
+ 
+ 
+ <br/><br/>
+
+#### ViewHolder 패턴
+
+
