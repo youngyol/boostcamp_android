@@ -9,6 +9,8 @@
 
 
 #### View
+[뷰가 그려지는 과정](http://april-21.tistory.com/15)
+[뷰가 그려지는 과정 더보기](https://medium.com/@britt.barak/measure-layout-draw-483c6a4d2fab)
 
 뷰:  사용자의 눈에 보이는 화면의 구성 요소들
 
